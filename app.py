@@ -1,18 +1,15 @@
+# a Basic Chat Bot tha responds about one topic only 'AI'. Built using google gen ai
+
 import streamlit as st
 from chatbot import Chatbot
 # App Title
 # Styled App Title
-st.markdown("<h2 style='text-align: center; color: blue;'>🤖 AI Chatbot</h1>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center; color: red;'>Ask me anything about Artificial Intelligence</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: blue;'>🤖 Movies Chatbot</h1>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: red;'>Enter movie name to search: </h1>", unsafe_allow_html=True)
 
 # Chat History State
 if "messages" not in st.session_state:
     st.session_state.messages = []
-
-
-# # User Input
-# st.write("---")
-# user_input = st.text_input("Type your message:", key="user_input")
 
 with st.form(key="message_form", clear_on_submit=True):
     user_input = st.text_input("Type your message:", key="user_input")

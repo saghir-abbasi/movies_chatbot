@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  chatbot:
+    build:
+      context: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app  # Mount the local project directory to /app in the container
+      - /app/__pycache__/  # Prevent caching issues by excluding this
+    env_file:
+      - .env
